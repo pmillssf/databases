@@ -3,6 +3,11 @@ var models = require('../models');
 module.exports = {
   messages: {
     get: function (req, res) {
+      var queryString = 'SELECT * FROM messages';
+      var dataReturn = models.messages.get(queryString);
+      res.on('end', function(dataReturn) {
+        return dataReturn;
+      });
      // From request get the parameteres of the get resquest ex: var requestParameter = request for all messages
      //var returnData =  models.messages.get(requestParameter);
      // res.on('end', function (data) {
@@ -19,3 +24,4 @@ module.exports = {
   }
 };
 
+// module.exports.messages.get();

@@ -29,4 +29,4 @@ module.exports = {
   }
 };
 
-module.exports.messages.get();
+// module.exports.messages.get();         USED TO TEST FUNCTIONALITY
